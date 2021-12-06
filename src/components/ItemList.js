@@ -4,7 +4,7 @@ import { itemsFetchData } from '../actions/items';
 
 class ItemList extends Component {
     componentDidMount() {
-        this.props.fetchData('http://599167402df2f40011e4929a.mockapi.io/items');
+        this.props.fetchData('https://jsonplaceholder.typicode.com/posts');
     }
 
     render() {
@@ -20,7 +20,7 @@ class ItemList extends Component {
             <ul>
                 {this.props.items.map((item) => (
                     <li key={item.id}>
-                        {item.label}
+                        {item.title}
                     </li>
                 ))}
             </ul>
